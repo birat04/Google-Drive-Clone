@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-    <a href="https://youtu.be/lie0cr3wESQ" target="_blank">
+    <a href="" target="_blank">
       <img src="public/readme/hero.png" alt="Project Banner">
     </a>
   <br />
@@ -12,7 +12,9 @@
     <img src="https://img.shields.io/badge/-Appwrite-black?style=for-the-badge&logoColor=white&logo=appwrite&color=FD366E" alt="appwrite" />
   </div>
 
-<h3 align="center">ZynkDrive</h3>
+<h3 align="center">ZynkDrive
+  <h4>The only storage solution you need...</h4>
+</h3>
 
    
 
