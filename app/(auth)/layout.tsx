@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               height={82} 
               className='h-auto'
             />
-            <span className="text-white font-bold text-[82px] leading-[82px]">
+            <span className="text-white font-bold text-[65px] leading-[65px]">
               ZynkDrive
             </span>
           </div>
@@ -35,8 +35,21 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           />
         </div>
       </section>
-      <main className="flex-[1.7] flex items-center justify-center">
+      <section className='flex flex-1 flex-col items-center bg-white p-4 py-10 lg:justify-center lg:p-10 lg:py-0'>
+        <div className='mb-16 lg:hidden'>
+            <Image  
+                src="/assets/icons/logo-full-brand.svg"
+                alt="logo"
+                width={224}
+                height={82}
+                className='h-auto w-[200px] lg:w-[250px]'
+            />
         {children}
+
+        </div>
+
+      </section>
+      <main className="flex-[1.2] flex items-center justify-center">
       </main>
     </div>
   )
