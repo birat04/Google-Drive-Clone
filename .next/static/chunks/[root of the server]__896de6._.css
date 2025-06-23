@@ -629,6 +629,14 @@ body {
   margin-top: 4rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.ml-2 {
+  margin-left: .5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -685,6 +693,16 @@ body {
   flex: 1.3;
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: 1s linear infinite spin;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -721,6 +739,12 @@ body {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
 .whitespace-nowrap {
@@ -760,13 +784,13 @@ body {
   background-color: hsl(var(--secondary));
 }
 
+.bg-transparent {
+  background-color: #0000;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-transparent {
-  background-color: #0000;
 }
 
 .p-10 {
@@ -792,6 +816,11 @@ body {
   padding-right: 2rem;
 }
 
+.py-1 {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+}
+
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -800,11 +829,6 @@ body {
 .py-2 {
   padding-top: .5rem;
   padding-bottom: .5rem;
-}
-
-.py-1 {
-  padding-top: .25rem;
-  padding-bottom: .25rem;
 }
 
 .font-poppins {
@@ -819,6 +843,11 @@ body {
   font-size: 65px;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-sm {
   font-size: .875rem;
   line-height: 1.25rem;
@@ -829,9 +858,9 @@ body {
   line-height: 1rem;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold {
@@ -966,6 +995,159 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.shad-input {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  border-style: none !important;
+  padding: 0 !important;
+  --tw-shadow: 0 0 #0000 !important;
+  --tw-shadow-colored: 0 0 #0000 !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+  outline: 2px solid #0000 !important;
+  outline-offset: 2px !important;
+  --tw-ring-offset-color: transparent !important;
+}
+
+.shad-input:focus {
+  --tw-ring-color: transparent !important;
+  --tw-ring-offset-width: 0px !important;
+}
+
+.shad-input:focus-visible {
+  outline: 2px solid #0000 !important;
+  outline-offset: 2px !important;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
+  --tw-ring-color: transparent !important;
+  --tw-ring-offset-width: 0px !important;
+}
+
+.shad-input::placeholder {
+  --tw-text-opacity: 1 !important;
+  color: rgb(163 178 199 / var(--tw-text-opacity)) !important;
+}
+
+.shad-form-item {
+  display: flex;
+  height: 78px;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: .75rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(242 245 249 / var(--tw-border-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  --tw-shadow: 0px 10px 30px 0px #4247611a;
+  --tw-shadow-colored: 0px 10px 30px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shad-form-label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  width: 100% !important;
+  padding-top: .5rem !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(51 63 78 / var(--tw-text-opacity)) !important;
+}
+
+.shad-form-message {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left: 1rem !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 116 116 / var(--tw-text-opacity)) !important;
+}
+
+.auth-form {
+  display: flex !important;
+  max-height: 800px !important;
+  width: 100% !important;
+  max-width: 580px !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.auth-form > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0 !important;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse))) !important;
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse)) !important;
+}
+
+.auth-form {
+  transition-property: all !important;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1) !important;
+  transition-duration: .15s !important;
+}
+
+@media (width >= 1024px) {
+  .auth-form {
+    height: 100% !important;
+  }
+
+  .auth-form > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0 !important;
+    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse))) !important;
+    margin-bottom: calc(2rem * var(--tw-space-y-reverse)) !important;
+  }
+}
+
+.form-title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 42px;
+  text-align: center !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(51 63 78 / var(--tw-text-opacity)) !important;
+}
+
+@media (width >= 768px) {
+  .form-title {
+    text-align: left !important;
+  }
+}
+
+.form-submit-button {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  height: 66px !important;
+  border-radius: 9999px !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(250 114 117 / var(--tw-bg-opacity)) !important;
+  transition-property: all !important;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1) !important;
+  transition-duration: .15s !important;
+}
+
+.form-submit-button:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(234 99 101 / var(--tw-bg-opacity)) !important;
+}
+
+.error-message {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: fit-content !important;
+  border-radius: .75rem !important;
+  background-color: #b800000d !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  text-align: center !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(184 0 0 / var(--tw-text-opacity)) !important;
 }
 
 .file\:border-0::file-selector-button {
